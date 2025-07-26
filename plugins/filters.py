@@ -20,7 +20,7 @@ from pyrogram.types import (
 
 from bot import Bot
 from script import script
-from config import MAINCHANNEL_ID
+from config import MAINCHANNEL_IDS
 
 BUTTONS = {}
  
@@ -31,13 +31,14 @@ async def filter(client: Bot, message: Message):
 
     if len(message.text) > 2:    
         btn = []
-        async for msg in client.USER.search_messages(MAINCHANNEL_ID,query=message.text,filter='document'):
-            file_name = msg.document.file_name
-            msg_id = msg.message_id                     
-            link = msg.link
-            btn.append(
-                [InlineKeyboardButton(text=f"{file_name}",url=f"{link}")]
-            )
+        for channel_id in MAINCHANNEL_IDS:
+            async for msg in client.USER.search_messages(channel_id, query=message.text, filter='document'):
+                file_name = msg.document.file_name
+                msg_id = msg.message_id                     
+                link = msg.link
+                btn.append(
+                    [InlineKeyboardButton(text=f"{file_name}", url=f"{link}")]
+                )
 
         if not btn:
             return
