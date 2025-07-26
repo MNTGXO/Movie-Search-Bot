@@ -28,7 +28,7 @@
             "description": "A pyrogram user session string. Generate from https://repl.it/@SpEcHiDe/GenerateStringSession",
             "value": ""
         },
-        "MAINCHANNEL_ID": {
+        "MAINCHANNEL_IDS": {
             "description": "ID of Channel from which the bot should search files",
             "value": ""
         }
