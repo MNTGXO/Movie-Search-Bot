@@ -16,8 +16,8 @@ API_HASH = os.environ.get("API_HASH", "")
 # Generate a user session string 
 TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "")
 
-# ID of Channel from which the bot shoul search files
-MAINCHANNEL_ID = os.environ.get("MAINCHANNEL_ID", "")
+# ID of Channels from which the bot should search files (comma separated)
+MAINCHANNEL_IDS = [int(x.strip()) for x in os.environ.get("MAINCHANNEL_IDS", "").split(",") if x.strip()]
 
 
 
