@@ -35,10 +35,13 @@
 * Add user account to your channel !
 * Add bot to group with admin rights.
 * Deploy the bot.
-* Once deployed and bot is started, send a message to channel (must do step)
+* Once deployed and bot is started, send a message to channels (must do step)
 * Bot will work now :)
 
-
+## New Features 
+* added multiple channel support
+* added Dockerfile
+  
 ## You can check the video tutorial on how to deploy
 
 [Click here to see tutorial video](https://youtu.be/KQVYQAOsFYY)
